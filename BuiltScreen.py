@@ -40,12 +40,12 @@ class QuitButton(Button):
         pygame.quit()
         sys.exit()
 
-class rockButton(Button):
+class rockButton(Image):
     def __init__(self):
-        super().__init__((200, 100), 100, 100, "Rock")
+        super().__init__((200, 100), 100, 100, "./imgus/bear.jpg")
     
     def onClick(self, screen):
-        screen.state["status"] = "Rock"
+        screen.state["status"] = "Bear"
         cpuChoice = randint(0,2)
         if cpuChoice == 0:
             screen.state["won/lost"] = "Tie!"
@@ -60,12 +60,12 @@ class rockButton(Button):
             screen.state["loss"] += 1
             screen.round += 1
 
-class paperButton(Button):
+class paperButton(Image):
     def __init__(self):
-        super().__init__((300, 100), 100, 100, "Paper")
+        super().__init__((300, 100), 100, 100, "./imgus/hunter.jpg")
     
     def onClick(self, screen):
-        screen.state["status"] = "Paper"
+        screen.state["status"] = "Hunter"
         cpuChoice = randint(0,2)
         if cpuChoice == 0:
             screen.state["won/lost"] = "You Lose!"
@@ -80,12 +80,12 @@ class paperButton(Button):
             screen.state["win"] += 1
             screen.round += 1
         
-class scissorsButton(Button):
+class scissorsButton(Image):
     def __init__(self):
-        super().__init__((400, 100), 100, 100, "Scissors")
+        super().__init__((400, 100), 100, 100, "./imgus/ninja.jpg")
     
     def onClick(self, screen):
-        screen.state["status"] = "Scissors"
+        screen.state["status"] = "Ninja"
         cpuChoice = randint(0,2)
         if cpuChoice == 0:
             screen.state["won/lost"] = "You Win!"
