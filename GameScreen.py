@@ -1,6 +1,6 @@
 from PyUI.Screen import Screen
 from PyUI.PageElements import *
-from BuiltScreen import rockButton, paperButton, scissorsButton
+from BuiltScreen import rockButton, paperButton, scissorsButton, EndButton
 
 class GameScreen(Screen):
     def __init__(self, window):

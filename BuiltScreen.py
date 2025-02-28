@@ -50,12 +50,15 @@ class rockButton(Button):
         if cpuChoice == 0:
             screen.state["won/lost"] = "Tie!"
             screen.state["tie"] += 1
+            screen.round += 1
         elif cpuChoice == 1:
             screen.state["won/lost"] = "You Win!"
             screen.state["win"] += 1
+            screen.round += 1
         else:
             screen.state["won/lost"] = "You Lose!"
             screen.state["loss"] += 1
+            screen.round += 1
 
 class paperButton(Button):
     def __init__(self):
@@ -67,12 +70,15 @@ class paperButton(Button):
         if cpuChoice == 0:
             screen.state["won/lost"] = "You Lose!"
             screen.state["loss"] += 1
+            screen.round += 1
         elif cpuChoice == 1:
             screen.state["won/lost"] = "Tie!"
             screen.state["tie"] += 1
+            screen.round += 1
         else:
             screen.state["won/lost"] = "You Win!"
             screen.state["win"] += 1
+            screen.round += 1
         
 class scissorsButton(Button):
     def __init__(self):
@@ -84,9 +90,12 @@ class scissorsButton(Button):
         if cpuChoice == 0:
             screen.state["won/lost"] = "You Win!"
             screen.state["win"] += 1
+            screen.round += 1
         elif cpuChoice == 1:
             screen.state["won/lost"] = "You Lose!"
             screen.state["loss"] += 1
+            screen.round += 1
         else:
             screen.state["won/lost"] = "Tie!"
             screen.state["tie"] += 1
+            screen.round += 1
